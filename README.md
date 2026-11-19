@@ -7,8 +7,11 @@ A Google Sheets statistical forecasting and academic performance diagnostic work
 The workbook is organized into four interconnected sheets forming a sequential data pipeline:
 
 | **`Sheet1`** | **Data Entry & Normalization** | Primary input ledger for session scores, unit tags, and categorized mark deductions. Supports up to 5 customisable categories of mark deduction. Calculates normalized scores ($X_t$) and pulls live forecasts back from `Sheet2`. |
+
 | **`Sheet2`** | **Statistical Backend** | Mathematical formulae computing rolling volatility, dynamic smoothing parameters ($\alpha_t, \beta_t$), Holt's trend, EWMA baselines, z-score anomaly weights, and two expanding-window `LINEST` regression models. |
+
 | **`Sheet3`** | **Forecast & Anomaly Dashboard** | Side-by-side comparison of actual vs. predicted scores (`EWMA Base` vs. `Weighted Regression`), charts, and a filtered anomaly table flagging high-residual sessions alongside their error breakdowns. |
+
 | **`Sheet4`** | **Executive & Unit Summary** | High-level KPI overview, global error taxonomy distribution, and an interactive unit-level diagnostic filter identifying the single largest source of lost marks per unit. |
 
 ---
